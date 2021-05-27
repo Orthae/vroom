@@ -39,7 +39,6 @@ jobs:
           ref: v5.25.0
           path: osrm-backend
       - name : Install OSRM dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: sudo apt-get install build-essential git cmake pkg-config libbz2-dev libstxxl-dev libstxxl1v5 libxml2-dev libzip-dev libboost-all-dev lua5.2 liblua5.2-dev libtbb-dev libluabind-dev libluabind0.9.1d1
         working-directory: osrm-backend
       - name: Compile OSRM
