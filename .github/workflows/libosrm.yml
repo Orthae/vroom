@@ -53,7 +53,7 @@ jobs:
         working-directory: osrm-backend
       - name: Install OSRM
         run: sudo cmake --build . --target install
-        working-directory: osrm
+        working-directory: osrm-backend/build
       - name: Compile Vroom
         run: make
         env:
