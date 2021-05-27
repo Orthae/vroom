@@ -29,7 +29,7 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: ${{ github.workspace }}/osrm
+          path: ${{ github.workspace }}/osrm-backend
           key: osrm-${{ matrix.cxx }}
       - name: Checkout OSRM repository
         if: steps.cache.outputs.cache-hit != 'true'
@@ -50,7 +50,6 @@ jobs:
           cmake .. -DCMAKE_BUILD_TYPE=Release
           cmake --build .
           cd ${{ github.workspace }}
-          cp -r osrm-backend osrm
         working-directory: osrm-backend
       - name: Install OSRM
         run: sudo cmake --build . --target install
