@@ -48,8 +48,8 @@ jobs:
           cd build
           cmake .. -DCMAKE_BUILD_TYPE=Release
           cmake --build .
-          cd ..
-          cp -r build ${{ github.workspace }}/osrm
+          cd ${{ github.workspace }}
+          cp -r osrm-backend osrm
         working-directory: osrm-backend
       - name: Install OSRM
         run: sudo cmake --build . --target install
