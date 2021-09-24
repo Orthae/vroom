@@ -5,7 +5,8 @@
 ### Added
 
 - `setup` key for tasks to refine service time modeling (#358)
-- `max_tasks` key limiting route size at vehicle level (#421)
+- `max_tasks` key limiting route size at vehicle level (#421, #566)
+- number of routes in solution summary (#524)
 - Github Actions CI (#436)
 - Check for libvroom example build in CI (#514)
 
@@ -22,6 +23,7 @@
 
 - "Infeasible route" error while an existing route plan exists (#506)
 - Break omitted with no other time window (#497)
+- Biased evaluation in `try_job_additions` (#572)
 
 ## [v1.10.0] - 2021-05-06
 

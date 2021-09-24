@@ -38,6 +38,7 @@ Input::Input(unsigned amount_size, const io::Servers& servers, ROUTER router)
     _geometry(false),
     _has_jobs(false),
     _has_shipments(false),
+    _cost_upper_bound(0),
     _max_matrices_used_index(0),
     _all_locations_have_coords(true),
     _amount_size(amount_size),
@@ -395,7 +396,7 @@ bool Input::vehicle_ok_with_vehicle(Index v1_index, Index v2_index) const {
   return _vehicle_to_vehicle_compatibility[v1_index][v2_index];
 }
 
-void Input::check_cost_bound(const Matrix<Cost>& matrix) const {
+Cost Input::check_cost_bound(const Matrix<Cost>& matrix) const {
   // Check that we don't have any overflow while computing an upper
   // bound for solution cost.
 
@@ -438,7 +439,7 @@ void Input::check_cost_bound(const Matrix<Cost>& matrix) const {
   }
 
   Cost bound = utils::add_without_overflow(start_bound, jobs_bound);
-  bound = utils::add_without_overflow(bound, end_bound);
+  return utils::add_without_overflow(bound, end_bound);
 }
 
 void Input::set_skills_compatibility() {
@@ -564,6 +565,7 @@ void Input::set_matrices(unsigned nb_thread) {
 
   std::exception_ptr ep = nullptr;
   std::mutex ep_m;
+  std::mutex cost_bound_m;
 
   auto run_on_profiles = [&](const std::vector<std::string>& profiles) {
     try {
@@ -610,8 +612,12 @@ void Input::set_matrices(unsigned nb_thread) {
                             profile + " profile.");
         }
 
-        // Check for potential overflow in solution cost.
-        check_cost_bound(p_m->second);
+        // Check for potential overflow in solution cost and store
+        // cost bound for current profile.
+        const auto current_bound = check_cost_bound(p_m->second);
+        cost_bound_m.lock();
+        _cost_upper_bound = std::max(_cost_upper_bound, current_bound);
+        cost_bound_m.unlock();
       }
     } catch (...) {
       ep_m.lock();
