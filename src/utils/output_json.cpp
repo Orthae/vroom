@@ -261,24 +261,24 @@ rapidjson::Value to_json(const Step& s,
   std::string str_type;
   switch (s.step_type) {
   case STEP_TYPE::START:
-    str_type = "start";
+    str_type = "START";
     break;
   case STEP_TYPE::END:
-    str_type = "end";
+    str_type = "END";
     break;
   case STEP_TYPE::BREAK:
-    str_type = "break";
+    str_type = "BREAK";
     break;
   case STEP_TYPE::JOB:
     switch (s.job_type) {
     case JOB_TYPE::SINGLE:
-      str_type = "job";
+      str_type = "JOB";
       break;
     case JOB_TYPE::PICKUP:
-      str_type = "pickup";
+      str_type = "PICKUP";
       break;
     case JOB_TYPE::DELIVERY:
-      str_type = "delivery";
+      str_type = "DELIVERY";
       break;
     }
     break;
