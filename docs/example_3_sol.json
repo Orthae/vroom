@@ -2,6 +2,7 @@
   "code": 0,
   "summary": {
     "cost": 18711,
+    "routes": 2,
     "unassigned": 0,
     "delivery": [
       10
@@ -48,7 +49,7 @@
       "distance": 95606,
       "steps": [
         {
-          "type": "start",
+          "type": "START",
           "location": [
             2.35044,
             48.71764
@@ -69,7 +70,7 @@
           "distance": 0
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             1.98935,
             48.701
@@ -93,7 +94,7 @@
           "distance": 32355
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.03655,
             48.61128
@@ -113,7 +114,7 @@
           "distance": 47016
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.28325,
             48.5958
@@ -133,7 +134,7 @@
           "distance": 68534
         },
         {
-          "type": "end",
+          "type": "END",
           "location": [
             2.35044,
             48.71764
@@ -174,7 +175,7 @@
       "distance": 216753,
       "steps": [
         {
-          "type": "start",
+          "type": "START",
           "location": [
             2.35044,
             48.71764
@@ -196,7 +197,7 @@
           "distance": 0
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.89357,
             48.90736
@@ -216,7 +217,7 @@
           "distance": 62696
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.41808,
             49.22619
@@ -236,7 +237,7 @@
           "distance": 131714
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.39719,
             49.07611
@@ -261,7 +262,7 @@
           "distance": 154582
         },
         {
-          "type": "end",
+          "type": "END",
           "location": [
             2.35044,
             48.71764
