@@ -37,7 +37,7 @@
       "distance": 95606,
       "steps": [
         {
-          "type": "start",
+          "type": "START",
           "location": [
             2.35044,
             48.71764
@@ -54,7 +54,7 @@
           "distance": 0
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             1.98935,
             48.701
@@ -74,7 +74,7 @@
           "distance": 32355
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.03655,
             48.61128
@@ -94,7 +94,7 @@
           "distance": 47016
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.28325,
             48.5958
@@ -114,7 +114,7 @@
           "distance": 68534
         },
         {
-          "type": "end",
+          "type": "END",
           "location": [
             2.35044,
             48.71764
@@ -151,7 +151,7 @@
       "distance": 216753,
       "steps": [
         {
-          "type": "start",
+          "type": "START",
           "location": [
             2.35044,
             48.71764
@@ -168,7 +168,7 @@
           "distance": 0
         },
         {
-          "type": "job",
+          "type": "JOB",
           "location": [
             2.89357,
             48.90736
@@ -188,7 +188,7 @@
           "distance": 62696
         },
         {
-          "type": "pickup",
+          "type": "PICKUP",
           "location": [
             2.41808,
             49.22619
@@ -208,7 +208,7 @@
           "distance": 131714
         },
         {
-          "type": "break",
+          "type": "BREAK",
           "id": "2",
           "setup": 0,
           "service": 300,
@@ -222,7 +222,7 @@
           "distance": 131714
         },
         {
-          "type": "delivery",
+          "type": "DELIVERY",
           "location": [
             2.39719,
             49.07611
@@ -242,7 +242,7 @@
           "distance": 154582
         },
         {
-          "type": "end",
+          "type": "END",
           "location": [
             2.35044,
             48.71764

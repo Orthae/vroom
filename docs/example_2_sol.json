@@ -23,7 +23,7 @@
       "priority": 0,
       "steps": [
         {
-          "type": "start",
+          "type": "START",
           "setup": 0,
           "service": 0,
           "waiting_time": 0,
@@ -32,7 +32,7 @@
           "violations": []
         },
         {
-          "type": "job",
+          "type": "JOB",
           "id": "1414",
           "shipmentId": "shipment_1414",
           "setup": 0,
@@ -44,7 +44,7 @@
           "violations": []
         },
         {
-          "type": "job",
+          "type": "JOB",
           "id": "1515",
           "shipmentId": "shipment_1515",
           "setup": 0,
@@ -56,7 +56,7 @@
           "violations": []
         },
         {
-          "type": "end",
+          "type": "END",
           "setup": 0,
           "service": 0,
           "waiting_time": 0,
